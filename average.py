@@ -9,4 +9,4 @@ def average(lst):
 #static list
 lst = [6, 5, 5, 6, 7, 6]
 lstsq = [(i - average(lst))**2 for i in lst]
-print(f'The mean is {average(lst)} and the standard deviation is {sqrt(average(lstsq))}')
+print(f'The mean is {average(lst)} and the Standard deviation is {sqrt(average(lstsq))}')
