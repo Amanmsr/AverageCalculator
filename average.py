@@ -7,6 +7,7 @@ def average(lst):
     return mean
 
 #static list
-lst = [6, 5, 5, 6, 7, 6]
+str = input('Enter a list of numbers: ')
+lst = list(map(int, str.split(' ')))
 lstsq = [(i - average(lst))**2 for i in lst]
 print(f'The Mean is {average(lst)} and the Standard deviation is {sqrt(average(lstsq))}')
