@@ -8,6 +8,14 @@ def average(lst):
 
 #static list
 str = input('Enter a list of numbers: ')
-lst = list(map(int, str.split(' ')))
+strlst = [n for n in str.split(' ') if n != '']
+try:
+    lst = list(map(int, strlst))
+    for num in lst:
+        if num > 100 or num < 0:
+            raise ValueError
+except ValueError:
+    print('Some incorrect values were entered')
+    quit()
 lstsq = [(i - average(lst))**2 for i in lst]
-print(f'The Mean is {average(lst)} and the Standard deviation is {sqrt(average(lstsq))}')
+print(f'The Mean is {round(average(lst), 3)} and the Standard deviation is {round(sqrt(average(lstsq)), 3)}')
