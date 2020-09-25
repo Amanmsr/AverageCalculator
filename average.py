@@ -8,7 +8,7 @@ def average(lst):
 
 #static list
 str = input('Enter a list of numbers: ')
-strlst = [n for n in str.split(' ') if n != '']
+strlst = str.split()
 try:
     lst = list(map(int, strlst))
     for num in lst:
