@@ -1,12 +1,4 @@
 from math import sqrt
-def average(lst):
-    mean = 0
-    for num in lst:
-        mean += num
-    mean /= len(lst)
-    return mean
-
-#static list
 str = input('Enter a list of numbers: ')
 strlst = str.split()
 try:
@@ -17,5 +9,6 @@ try:
 except ValueError:
     print('Some incorrect values were entered')
     quit()
-lstsq = [(i - average(lst))**2 for i in lst]
-print(f'The Mean is {round(average(lst), 3)} and the Standard deviation is {round(sqrt(average(lstsq)), 3)}')
+mean = sum(lst)/len(lst)
+std = sqrt(sum([(i - mean)**2 for i in lst])/len(lst))
+print(f'The Mean is {round(mean, 3)} and the Standard deviation is {round(std, 3)}')
