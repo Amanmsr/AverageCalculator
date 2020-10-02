@@ -19,3 +19,5 @@ except ValueError:
     quit()
 lstsq = [(i - average(lst))**2 for i in lst]
 print(f'The Mean is {round(average(lst), 3)} and the Standard deviation is {round(sqrt(average(lstsq)), 3)}')
+
+print(f'mean is {sum(lst)/len(lst)} and std is {sqrt(sum(lstsq)/len(lst))}')
